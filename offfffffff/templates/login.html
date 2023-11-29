@@ -1,0 +1,20 @@
+{% extends "taslak.html" %}
+
+{% block baslik %} Giriş Yap {% endblock %} 
+
+{% block icerik %}
+
+    <div class="main">
+        <form action="{{ url_for('login_kontrol') }}" method="post">
+            <label> Giriş </label>
+            <input type="text" name="isim" placeholder="Kullanıcı adı" required>
+            <input type="password" name="sifre" placeholder="Şifre giriniz" required>
+            <button> Giriş </button>
+            <a href="/kaydol">Kaydol</a>
+            {% if hata %}
+                <label class="hata"> {{ hata }} </label>
+            {% endif %}
+        </form>
+    </div>
+    
+{% endblock %}

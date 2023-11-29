@@ -1,0 +1,20 @@
+{% extends "taslak.html" %}
+
+{% block baslik %} Ürün Güncelle {% endblock %} 
+
+{% block icerik %}
+<div class="main">
+    <form action="{{ url_for('urun_kaydet') }}" method="post">
+        <label> Ürün </label>
+        <input type="text" name="id"    value="{{ urun[0] }}"  readonly>
+        <input type="text" name="kod"   value="{{ urun[1] }}" placeholder="Kodu" required>
+        <input type="text" name="ISBN"  value="{{ urun[2] }}" placeholder="ISBN" required>
+        <input type="text" name="isim"  value="{{ urun[3] }}" placeholder="İsim" required>
+        <input type="text" name="fiyat" value="{{ urun[4] }}"placeholder="Fiyat" required>
+        <button> Kaydet </button>
+        {% if hata %}
+            <label class="hata"> {{ hata }} </label>
+        {% endif %}            
+    </form>
+</div>
+{% endblock %} 

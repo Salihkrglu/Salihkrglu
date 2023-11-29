@@ -1,0 +1,94 @@
+body {
+    background: linear-gradient(rgb(3, 3, 90), rgb(37, 37, 172));
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+label {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+
+.main {
+    margin-top: 50px;
+    width: 300px;
+    height: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background: linear-gradient(rgb(15, 15, 109), rgb(37, 37, 172));
+    padding: 20px;
+    text-align: center;
+}
+
+input {
+    width: 80%;
+    height: 30px;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+}
+
+button {
+    width: 50%;
+    height: 40px;
+    background-color: rgb(15, 15, 109);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+p {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+a {
+    background-color: rgb(62, 165, 235);
+    border: 2px solid purple;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.urunler {
+    background-color: rgb(118, 147, 243);
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    margin-top: 50px;
+}
+
+.guncelle, .sil, .ekle {
+    width: 80px;
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.guncelle {
+    background-color: orange;
+}
+
+.sil {
+    background-color: red;
+}
+
+.ekle {
+    background-color: green;
+}

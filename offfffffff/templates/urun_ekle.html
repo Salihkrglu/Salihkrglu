@@ -1,0 +1,22 @@
+{% extends "taslak.html" %}
+
+{% block baslik %} Ürün Ekle {% endblock %} 
+
+{% block icerik %}
+<div class="main">
+    <form action="{{ url_for('urun_ekle') }}" method="post" enctype="multipart/form-data">
+        <label> Ürün </label>
+        <input type="text" name="id"   placeholder="id" required>
+        <input type="text" name="kod"   placeholder="Kodu" required>
+        <input type="text" name="ISBN"  placeholder="ISBN" required>
+        <input type="text" name="isim"  placeholder="İsim" required>
+        <input type="text" name="fiyat" placeholder="Fiyat" required>
+        <input type="file" name="resim" placeholder="Resim Seçiniz" required>
+
+        <button> Kaydet </button>
+        {% if hata %}
+            <label class="hata"> {{ hata }} </label>
+        {% endif %}            
+    </form>
+</div>
+{% endblock %} 
